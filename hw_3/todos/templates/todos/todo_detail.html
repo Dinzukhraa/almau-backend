@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Detail</title>
+</head>
+<body>
+    <h1>{{ todo.title }}</h1>
+    <p>Description: {{ todo.description }}</p>
+    <p>Due Date: {{ todo.due_date }}</p>
+    <p>Status: {% if todo.status %}Completed{% else %}Incomplete{% endif %}</p>
+    <a href="{% url 'delete_todo' id=todo.id %}">Delete</a>
+</body>
+</html>
